@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>ЛР-3 – макет (float)</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+        }
+
+        .wrapper {
+            width: 60%;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 40px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.15);
+        }
+
+        .layout {
+            width: 100%;
+        }
+
+        .row {
+            width: 100%;
+            overflow: hidden; /* очищення float */
+        }
+
+        .block {
+            float: left;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 10px;
+        }
+
+        /* Ширини колонок у % */
+        :root {
+            --left: 30%;
+            --center: 40%;
+            --right: 30%;
+        }
+
+        /* ===== ВЕРХНІЙ РЯД (35 px) ===== */
+        .row-top .left-top {
+            width: var(--left);
+            height: 35px;
+            background: #9fffd0;        /* світло-зелений */
+        }
+
+        .row-top .top-text {
+            width: calc(var(--center) + var(--right));
+            height: 35px;
+            background: #7fdfff;        /* блакитний */
+        }
+
+        /* ===== СЕРЕДНІЙ РЯД ===== */
+        .row-middle .left-img {
+            width: var(--left);
+            height: 220px;
+            background: #9fffd0;        /* зелений */
+        }
+
+        .row-middle .center-img {
+            width: var(--center);
+            height: 220px;
+            background: #fff6a0;        /* жовтий */
+        }
+
+        .row-middle .right-text {
+            width: var(--right);
+            height: 220px;
+            background: #ffb0ff;        /* рожевий */
+        }
+
+        /* ===== НИЖНІЙ РЯД (35 px) ===== */
+        .row-bottom .bottom-text {
+            width: calc(var(--left) + var(--center));
+            height: 35px;
+            background: #ffe0a0;        /* бежевий */
+        }
+
+        .row-bottom .bottom-empty {
+            width: var(--right);
+            height: 35px;
+            background: #ffb0ff;        /* продовження рожевої колонки */
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="layout">
+
+        <!-- Верхній ряд -->
+        <div class="row row-top">
+            <div class="block left-top"></div>
+            <div class="block top-text">Хедер / меню</div>
+        </div>
+
+        <!-- Середній ряд -->
+        <div class="row row-middle">
+            <div class="block left-img">Ліва панель (банер)</div>
+            <div class="block center-img">Головний контент</div>
+            <div class="block right-text">Правий сайдбар</div>
+        </div>
+
+        <!-- Нижній ряд -->
+        <div class="row row-bottom">
+            <div class="block bottom-text">Футер / контакти</div>
+            <div class="block bottom-empty"></div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

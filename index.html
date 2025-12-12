@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>ЛР-3 – Макет сайту (варіант 9)</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+        }
+
+        .page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 32px 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.1);
+            max-width: 520px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+
+        h2 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            border: 1px solid transparent;
+            transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+        }
+
+        .btn-float {
+            background: #7fdfff;
+            color: #003344;
+            border-color: #5bc4e8;
+        }
+
+        .btn-float:hover {
+            background: #5bc4e8;
+        }
+
+        .btn-flex {
+            background: #ffb0ff;
+            color: #4a004a;
+            border-color: #e68de6;
+        }
+
+        .btn-flex:hover {
+            background: #e68de6;
+        }
+
+        .note {
+            font-size: 12px;
+            color: #777;
+            margin-top: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="page">
+    <div class="card">
+        <h1>Лабораторна робота №3</h1>
+        <h2>Блочна верстка макету сайту (варіант 9)</h2>
+
+        <p>
+            Оберіть реалізацію макету сторінки:<br>
+            верстка за допомогою <strong>float</strong> або за допомогою
+            <strong>flexbox</strong>.
+        </p>
+
+        <div class="buttons">
+            <a href="lr3_var9_float.html" class="btn btn-float">
+                Відкрити версію з float
+            </a>
+            <a href="lr3_var9_flex.html" class="btn btn-flex">
+                Відкрити версію з flex
+            </a>
+        </div>
+
+        <p class="note">
+            Ширини блоків задані у відсотках, макет відповідає зображенню з методички.
+        </p>
+    </div>
+</div>
+
+</body>
+</html>

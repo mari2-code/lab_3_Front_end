@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>ЛР-3 – макет (flex)</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+        }
+
+        .wrapper {
+            width: 60%;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 40px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.15);
+        }
+
+        .layout {
+            width: 100%;
+        }
+
+        :root {
+            --left: 30%;
+            --center: 40%;
+            --right: 30%;
+        }
+
+        .row {
+            width: 100%;
+            display: flex;        /* flex-контейнер */
+        }
+
+        .block {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 10px;
+        }
+
+        /* ===== ВЕРХНІЙ РЯД (35 px) ===== */
+        .row-top .left-top {
+            flex-basis: var(--left);
+            height: 35px;
+            background: #9fffd0;
+        }
+
+        .row-top .top-text {
+            flex-basis: calc(var(--center) + var(--right));
+            height: 35px;
+            background: #7fdfff;
+        }
+
+        /* ===== СЕРЕДНІЙ РЯД ===== */
+        .row-middle .left-img {
+            flex-basis: var(--left);
+            height: 220px;
+            background: #9fffd0;
+        }
+
+        .row-middle .center-img {
+            flex-basis: var(--center);
+            height: 220px;
+            background: #fff6a0;
+        }
+
+        .row-middle .right-text {
+            flex-basis: var(--right);
+            height: 220px;
+            background: #ffb0ff;
+        }
+
+        /* ===== НИЖНІЙ РЯД (35 px) ===== */
+        .row-bottom .bottom-text {
+            flex-basis: calc(var(--left) + var(--center));
+            height: 35px;
+            background: #ffe0a0;
+        }
+
+        .row-bottom .bottom-empty {
+            flex-basis: var(--right);
+            height: 35px;
+            background: #ffb0ff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="layout">
+
+        <!-- Верхній ряд -->
+        <div class="row row-top">
+            <div class="block left-top"></div>
+            <div class="block top-text">Хедер / меню</div>
+        </div>
+
+        <!-- Середній ряд -->
+        <div class="row row-middle">
+            <div class="block left-img">Ліва панель (банер)</div>
+            <div class="block center-img">Головний контент</div>
+            <div class="block right-text">Правий сайдбар</div>
+        </div>
+
+        <!-- Нижній ряд -->
+        <div class="row row-bottom">
+            <div class="block bottom-text">Футер / контакти</div>
+            <div class="block bottom-empty"></div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
